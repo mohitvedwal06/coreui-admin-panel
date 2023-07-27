@@ -22,7 +22,6 @@ export default {
   methods: {
     hideShowSidebar(value){
       this.isTrue = value.isTrue;
-      // console.log("isTrue", this.isTrue);
     }
   }
 }

@@ -75,15 +75,13 @@ import ProfileDropdown from './ProfileDropdown.vue';
     padding-top: 1%;
     padding-bottom: 1%;
     border-bottom: 1px solid;
-    /* position:relative; */
     width: 100%;
-    height:13vh;
+    height:10vh;
     align-items:center;
+    justify-content: space-between;
 }
 .first{
-    /* border: 1px solid black; */
     padding-left: 20px; 
-    /* width: 21%; */
 }
 .inner{
     display: flex;
@@ -94,12 +92,7 @@ import ProfileDropdown from './ProfileDropdown.vue';
 .inner p{
     margin:0px 8px 0px 8px;
 }
-.second{
-    /* border: 1px solid black; */
-    width: 58%;
-}
 .third{
-    /* width: 21%; */
     padding-right: 25px;
 }
 .innerThird{
@@ -107,9 +100,10 @@ import ProfileDropdown from './ProfileDropdown.vue';
     width: 220px;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 .innerThird p{
-    margin: 0px 16px 0px 14px;
+    margin: 0;
     font-size: 24px;
 }
 #profile{
