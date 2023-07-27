@@ -3,7 +3,7 @@
         <div id="sideBar-div" class="w-100 overflow-hidden" >
             <div class="pt-3 ps-3 pb-3 bg-dark" id="sideBar-main-div">
                 <div class="d-flex justify-content-center pb-4" id="sideBar-logo">
-                    <h2>AM</h2>
+                    <h2>MA</h2>
                     <h2 class="ms-2">Tutorials</h2>
                 </div>
                 <div class="sidebar-content-div">
@@ -71,7 +71,7 @@ export default {
     props: ['isTrue']
 }
 </script>
-<style >
+<style scoped>
     /* *{
     border: 1px solid red;
 } */

@@ -8,7 +8,6 @@
 <script>
 import SideBar from '../src/components/SideBar/index.vue'
 import AppHeader from './components/AppHeader.vue';
-
 export default {
   name: 'App',
   data() {

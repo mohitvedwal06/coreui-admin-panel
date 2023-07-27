@@ -7,13 +7,18 @@
             <p>Users</p>
             <p>Settings</p>
         </div>
+    </div>
+    <div v-if="isShown" :class= "!isTrue ? 'profileDropdown': 'profileDropdowns'">
+      <ProfileDropdown />
+    </div>
+     <div class="second">
      </div>
      <div :class="!isTrue ? 'third' : 'headerLinks'">
        <div class="innerThird">
         <p><fa icon="bell" class="text-dark"/></p>
         <p><fa icon="list" class="text-dark"/></p>
         <p><fa icon="envelope-open" class="text-dark"/></p>
-        <p><fa icon="user-circle" class="text-dark" id="profile"/></p>
+        <p><fa icon="user-circle" class="text-dark" id="profile"  @click="clicked"/></p>
         {{ console.log("isTrue", this.isTrue) }}
        </div>
      </div>
@@ -21,26 +26,44 @@
 </template>
 
 <script>
+import ProfileDropdown from './ProfileDropdown.vue';
+
     export default {
         data() {
             return {
                 isTrue : false,
+                isShown:false
             }
+        },
+        components:{
+            ProfileDropdown
         },
         methods: {
             moveSideBar() {
                 if(this.isTrue===true){
                     this.isTrue = false;
+                    this.isShown=false;
                     this.$emit('hideShowSidebar',{
                         isTrue: this.isTrue,
+                        
                     });
                 }
                 else{   
                     this.isTrue = true;
+                    this.isShown=false;
                     this.$emit('hideShowSidebar',{
                         isTrue: this.isTrue,
                     });               
                 }
+            },
+            clicked(){
+                  if(this.isShown===false)
+                  {
+                    this.isShown=true
+                  }
+                  else{
+                    this.isShown=false
+                  }
             }
         }
     }
@@ -94,6 +117,32 @@
 }
 #hamburgerMenu-btn{
     border: none;
+}
+.profileDropdown{
+    width: 18%;
+    border-radius: 4px;
+    font-size: .79rem;
+    line-height: 1rem;
+    float: right;
+    position: relative;
+    z-index: 999;
+    box-shadow: 1px 1px 12px -9px;
+    border: 1px groove grey;
+    left: 26rem !important;
+    top: 14.79rem;
+}
+.profileDropdowns{
+    width: 16%;
+    border-radius: 4px;
+    font-size: .79rem;
+    line-height: 1rem;
+    float: right;
+    position: relative;
+    z-index: 999;
+    box-shadow: 1px 1px 12px -9px;
+    border: 1px groove grey;
+    left: 36rem !important;
+    top: 15rem;
 }
 
 </style>
