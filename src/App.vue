@@ -18,12 +18,11 @@ export default {
   },
   components: {
     SideBar,
-    AppHeader
+    AppHeader,
   },
   methods: {
     hideShowSidebar(value){
       this.isTrue = value.isTrue;
-      // console.log("isTrue", this.isTrue);
     }
   }
 }
