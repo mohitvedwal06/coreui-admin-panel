@@ -1,6 +1,6 @@
 <template lang="">
-    <div class="d-flex">
-        <div id="sideBar-div">
+    <div class="d-flex sideBar-visibility" :class= "!isTrue ? 'showSideBar': 'hideSideBar'" >
+        <div id="sideBar-div" class="w-100 overflow-hidden" >
             <div class="pt-3 ps-3 pb-3 bg-dark" id="sideBar-main-div">
                 <div class="d-flex justify-content-center pb-4" id="sideBar-logo">
                     <h2>AM</h2>
@@ -63,42 +63,46 @@
                 </div>
             </div>
         </div>
-        <div id="secondDiv"></div>
     </div>
 </template>
 
 <script>
 export default {
-
+    props: ['isTrue']
 }
 </script>
-<style scoped>
+<style >
+    /* *{
+    border: 1px solid red;
+} */
     #sideBar-div{
-        width:21.5%;
-        position:fixed;
-    }
-    #secondDiv{
-        width:78.5%;
+        position:relative;
     }
     #sideBar-main-div{
         color:white;
     }
     .sidebar-content-div{
         overflow-y: scroll;
-        height:88vh;
-
+        height:91vh;
+        padding: 0% 50px 0px 0px;
     }
     #sideBar-logo h2{
         font-style: italic;
         font-weight: 800;
     }
-    /* #sideBar-contents, #sideBar-theme{
-        border:1px solid;
-    } */
     #sideBar-theme-heading{
         font-weight:700;
     }
     .sidebar-content:hover{
         background-color: rgba(98, 98, 98, 0.929);
+    }
+    .sideBar-visibility{
+        transition: 1s ease-in-out;
+    }
+    .showSideBar{
+        width: 21%;
+    }
+    .hideSideBar{
+        width: 0%;
     }
 </style>
