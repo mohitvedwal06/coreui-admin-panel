@@ -71,7 +71,7 @@ export default {
     props: ['isTrue']
 }
 </script>
-<style >
+<style scoped>
     /* *{
     border: 1px solid red;
 } */
