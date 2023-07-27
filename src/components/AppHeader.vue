@@ -119,32 +119,29 @@ import ProfileDropdown from './ProfileDropdown.vue';
     border: none;
 }
 .profileDropdown{
-    width: 35%;
+    width: 18%;
     border-radius: 4px;
     font-size: .79rem;
     line-height: 1rem;
     float: right;
-    margin-top: -14px;
     position: relative;
-    /* margin-right: 51px; */
     z-index: 999;
     box-shadow: 1px 1px 12px -9px;
     border: 1px groove grey;
-    left: 31rem !important;
-    top: 15.5rem;
+    left: 26rem !important;
+    top: 14.79rem;
 }
 .profileDropdowns{
-    width: 21%;
+    width: 16%;
     border-radius: 4px;
     font-size: .79rem;
     line-height: 1rem;
     float: right;
     position: relative;
-    /* margin-right: 51px; */
     z-index: 999;
     box-shadow: 1px 1px 12px -9px;
     border: 1px groove grey;
-    left: 46.5rem !important;
+    left: 36rem !important;
     top: 15rem;
 }
 
