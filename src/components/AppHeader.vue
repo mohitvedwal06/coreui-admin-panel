@@ -74,11 +74,11 @@ import ProfileDropdown from './ProfileDropdown.vue';
     display: flex;
     padding-top: 1%;
     padding-bottom: 1%;
-    border-bottom: 1px solid;
     width: 100%;
     height:10vh;
     align-items:center;
     justify-content: space-between;
+    box-shadow: 0px 1px 3px #d7d7d7;
 }
 .first{
     padding-left: 20px; 

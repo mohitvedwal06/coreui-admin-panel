@@ -75,9 +75,6 @@ export default {
     /* *{
     border: 1px solid red;
 } */
-    #sideBar-div{
-        position:relative;
-    }
     #sideBar-main-div{
         color:white;
     }
@@ -85,6 +82,9 @@ export default {
         overflow-y: scroll;
         height:91vh;
         padding: 0% 50px 0px 0px;
+    }
+    .sidebar-content-div::-webkit-scrollbar{
+        display:none;
     }
     #sideBar-logo h2{
         font-style: italic;
